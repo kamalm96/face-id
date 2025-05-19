@@ -12,8 +12,7 @@ This project implements a simplified face detection and recognition system, conc
 The system operates in two main phases:
 
 ### 1. Enrollment (`enroll_faces.py`)
-- **Input**: A `known_faces/` directory containing subdirectories for each known person, with several images per person. Basically create a directory under known_faces, give it your name, or whoever's face you're trying to ID, then insert between 5-10 images of that person, then run ```python enroll_faces.py``` to create the embedding of the face.
-- Another method if you do not have a webcam would be to run ```python recognize_face.py --image_path /path/to/your_test_photo.jpg```.
+- **Input**: A `known_faces/` directory containing subdirectories for each known person, with several images per person. Basically create a directory under `known_faces/`, give it your name, or whoever's face you're trying to ID, then insert between 5-10 images of that person, then run ```python enroll_faces.py``` to create the embedding of the face.
 - **Face Detection**: Uses [MTCNN (Multi-task Cascaded Convolutional Networks)](https://arxiv.org/abs/1604.02878) to detect and crop faces.
 - **Face Embedding**: Generates embeddings using a [FaceNet-like (InceptionResnetV1)](https://arxiv.org/abs/1503.03832) model pre-trained on the VGGFace2 dataset.
 - **Averaging & Storage**: Embeddings are averaged per person and saved in `known_embeddings.pt`.
@@ -40,3 +39,5 @@ The system operates in two main phases:
 mkdir face_id_project
 cd face_id_project
 - After the Enrollment step mentioned above, run ```python recognize_face.py``` with a webcam connected to your computer, and it would use the name of the subdirectory created as the person's name if they exist in the webcam range, else it will display Unknown.
+- Another method if you do not have a webcam would be to run ```python recognize_face.py --image_path /path/to/your_test_photo.jpg```.
+
