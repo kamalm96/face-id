@@ -38,6 +38,7 @@ The system operates in two main phases:
 ```bash
 mkdir face_id_project
 cd face_id_project
+```
 - After the Enrollment step mentioned above, run ```python recognize_face.py``` with a webcam connected to your computer, and it would use the name of the subdirectory created as the person's name if they exist in the webcam range, else it will display Unknown.
 - Another method if you do not have a webcam would be to run ```python recognize_face.py --image_path /path/to/your_test_photo.jpg```.
 
