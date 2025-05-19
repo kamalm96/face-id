@@ -138,4 +138,5 @@ The system operates in two main phases:
 *   Performance depends heavily on the quality of the pre-trained models.
 *   No anti-spoofing (can be fooled by a photo).
 *   Accuracy might vary significantly based on individual facial features and the diversity of the enrolled images.#   f a c e - i d  
+ #   f a c e - i d  
  
